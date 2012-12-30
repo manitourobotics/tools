@@ -22,15 +22,15 @@
 #   - network-tools 
 #   - wicd 
 
-##  User set variables
+##  User set variables -- Using text files
 # Unique identifier for the computer you're running the script on
-ip_identifier="8"
-netmask="255.255.255.0"
-team_number="2945"
-wired_network_interface="eth0" 
+ip_identifier=`cat ip_identifier.txt` # 4
+netmask=`cat netmask.txt` # 255.255.255.0
+team_number=`cat team_number.txt` # 2945
+wired_network_interface=`cat wired_network_interface.txt` # eth0
 
-wireless_network_interface="wlan0"
-access_point="2945" # only needed for wireless. Assumes network has no 
+wireless_network_interface=`cat wireless_network_interface.txt` #wlan0
+access_point=`cat access_point.txt` # only needed for wireless. Assumes network has no 
 #                       encryption
 # wireless or wired default
 default_network_interface="$wired_network_interface"
@@ -101,6 +101,7 @@ function wireless_to_dhcp {
     # Let wicd automatically connect to your dhcp network
     # wicd-cli -x --wireless
     # wicd-cli -c --wireless
+    echo "foo"
 }
 
 function wired_to_static {
@@ -110,6 +111,7 @@ function wired_to_static {
 function wired_to_dhcp {
     # wicd-cli -x --wired
     # wicd is a piece of shit
+    echo "foo"
 }
 
 final_ip=`return_final_ip $team_number $ip_identifier`
