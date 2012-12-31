@@ -1,6 +1,7 @@
 #!/usr/bin/env python2
 import subprocess
 import ConfigParser
+import time
 
 config = ConfigParser.ConfigParser()
 try:
@@ -18,8 +19,8 @@ except ConfigParser.NoSectionError:
     print "Error parsing options"
     raise SystemExit
 
-print static_ip
-print interface_type
+print "static_ip option: " + static_ip
+print "interface_type option: " + interface_type
 
 def retrieve_ip_information(interface):
     netsh_output_cmd = 'netsh interface ipv4 show address name="' + \
@@ -81,8 +82,9 @@ while True:
             print "Error retrieving IP information"
             raise SystemExit
     except ValueError:
+        time.sleep(0.5)
         pass
-    if times_retrieved_information >= 10:
+    if times_retrieved_information >= 30:
         print "Failed to verify static ip connection"
         raise SystemExit
 
