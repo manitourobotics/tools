@@ -15,7 +15,7 @@ try:
     static_ip = config.get( main_section, 'static_ip' )
     interface_type = config.get( main_section, 'interface_type' )
 except ConfigParser.NoSectionError: 
-    print "Be sure to copy config.txt.example to config.txt"
+    print "Be sure to copy config.example.txt to config.txt"
     print "Error parsing options"
     raise SystemExit
 

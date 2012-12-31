@@ -1,5 +1,5 @@
 * Install python2 if you don't have it
-* Copy config.txt.example to config.txt and configure static_ip and interface_type
+* Copy config.example.txt to config.txt and configure static_ip and interface_type
 * Create a shortcut to run-toggle-interface.bat by right-clicking on the file and clicking "Create Shortcut" (the default shortcut propbably won't work) 
 * After creating the shortcut, right click on it and click properties. In the shortcut tab, click advanced... and check run as administrator(this program always needs to be run as admin). Click ok * 2
 * Drag shortcut to your start menu for fast switching
