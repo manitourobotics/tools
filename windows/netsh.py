@@ -4,7 +4,7 @@ import ConfigParser
 
 config = ConfigParser.ConfigParser()
 try:
-    config.read("config.txt.example")
+    config.read("config.txt")
 except: 
     print "Error reading config.txt"
     raise SystemExit
