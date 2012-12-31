@@ -9,7 +9,7 @@ interface_type="wired" # 'wired' or 'wireless'
 # 'Network Connections'
 if interface_type == "wireless":
     interface = "Wireless Network Connection"
-elif interface_type =="wired":
+elif interface_type == "wired":
     interface = "Local Area Connection"
 else: 
     raise
