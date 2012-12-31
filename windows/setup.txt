@@ -1,0 +1,6 @@
+* Install python2 if you don't have it
+* edit the net-connect.bat to point to your copy of netsh.py
+* edit the netsh.py to your team number and ip identifier, and whether you want to use the wired or wireless interface
+* create a shortcut to net-connect.bat by right-clicking on the program(the default shortcut propbably won't work) 
+* after creating the shortcut, right click on it and click properties. In the shortcut tab, click advanced... and check run as administrator(this program always needs to be run as admin). Click ok * 2
+* Drag shortcut to your start menu for fast switching
