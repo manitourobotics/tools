@@ -3,7 +3,18 @@ import subprocess
 import os
 
 static_ip = "10.29.45.4"
-interface = "Local Area Connection"
+interface_type="wired" # 'wired' or 'wireless'
+
+# Note: the interface names may be different for you. Check them in
+# 'Network Connections'
+if interface_type == "wireless":
+    interface = "Wireless Network Connection"
+elif interface_type =="wired":
+    interface = "Local Area Connection"
+else: 
+    raise
+
+# You don't need to set these unless you are using a static wireless connection
 # I don't set the gateway, because it messes with how Windows 7 looks for 
 # internet access
 
