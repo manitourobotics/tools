@@ -1,0 +1,3 @@
+[user_set_variables]
+# A list of interfaces you want to be read information from
+survey_interfaces=Local Area Connection, Wireless Network Connection
