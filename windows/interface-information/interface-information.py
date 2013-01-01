@@ -27,5 +27,3 @@ except ConfigParser.NoSectionError:
     print "Error reading variables"
     print "Be sure to copy config.example.txt to config.txt and configure"
     sys.exit(-1)
-
-os.system("pause")

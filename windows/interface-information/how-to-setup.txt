@@ -1,5 +1,5 @@
 * install python2 if not installed
 * copy config.example.txt to config.txt
 * configure config.txt to your network interfaces(the default should be fine)
-* pin the toggle-interface.py to your start menu if you wish
-* run toggle-interface.py
+* pin the run-toggle-interface.bat to your start menu if you wish
+* run run-toggle-interface.bat
