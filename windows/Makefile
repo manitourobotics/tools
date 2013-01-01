@@ -1,4 +1,4 @@
-ver = 1.1.1
+ver = 1.2
 name = toggle-interface
 zip_filename=$(name)-$(ver)
 
@@ -9,4 +9,4 @@ zip:
 	zip -r $(zip_filename).zip $(zip_filename)/
 	rm -r $(zip_filename)
 clean:
-	rm $(zip_filename)
+	rm *.zip
