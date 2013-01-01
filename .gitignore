@@ -7,3 +7,4 @@ wired_network_interface.txt
 wireless_network_interface.txt
 config.txt
 *.lnk
+*.vim
