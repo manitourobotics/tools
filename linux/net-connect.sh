@@ -24,13 +24,12 @@
 
 ##  User set variables -- Using text files
 # Unique identifier for the computer you're running the script on
-ip_identifier=`cat ip_identifier.txt` # 4
-netmask=`cat netmask.txt` # 255.255.255.0
-team_number=`cat team_number.txt` # 2945
-wired_network_interface=`cat wired_network_interface.txt` # eth0
-
-wireless_network_interface=`cat wireless_network_interface.txt` #wlan0
-access_point=`cat access_point.txt` # only needed for wireless. Assumes network has no 
+ip_identifier="4" # 4
+netmask="255.255.255.0" # 255.255.255.0
+team_number="2945" # 2945
+wired_network_interface="eth0" # eth0
+wireless_network_interface="wlan0" #wlan0
+access_point="2945" # only needed for wireless. Assumes network has no 
 #                       encryption
 # wireless or wired default
 default_network_interface="$wired_network_interface"
