@@ -104,7 +104,7 @@ function wireless_to_dhcp {
 }
 
 function wired_to_static {
-    sudo ifconfig $selected_network_interface $final_ip
+    sudo ifconfig $selected_network_interface $final_ip netmask $netmask
 }
 
 function wired_to_dhcp {
