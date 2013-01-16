@@ -6,12 +6,18 @@
 # plugin, so hence the script
 
 import win32ui
-import sleep
+import time
+import subprocess
 
 TEAM_NAME = "2945"
 if __name__ == "__main__":
     while True:
         windowName = "SmartDashboard - %s" % TEAM_NAME
-        if FindWindow(windowName, "SmartDashboard" ):
-            print "found smd"
+	try:
+            smartDashboard = win32ui.FindWindow(None, "SmartDashboard - 2945")
+            print "found dashboard"
+        except Exception:
+            subprocess.call(['C:\Program Files\SmartDashboard\SmartDashboard.exe'])
+            print "not found"
+            
         time.sleep(1)
