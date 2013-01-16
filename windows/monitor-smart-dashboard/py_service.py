@@ -11,9 +11,9 @@ import os, sys, string, time
 
 class aservice(win32serviceutil.ServiceFramework):
    
-   _svc_name_ = "MyServiceShortName"
-   _svc_display_name_ = "My Serivce Long Fancy Name!"
-   _svc_description_ = "THis is what my crazy little service does - aka a DESCRIPTION! WHoa!"
+   _svc_name_ = "SmartDashboardRevive"
+   _svc_display_name_ = "Smart Dashboard Reviver"
+   _svc_description_ = "Revives Smart Dashboard when it closes"
          
    def __init__(self, args):
            win32serviceutil.ServiceFramework.__init__(self, args)
@@ -44,11 +44,8 @@ class aservice(win32serviceutil.ServiceFramework):
                  #Ok, here's the real money shot right here.
                  #[actual service code between rests]
                  try:
-                     file_path = "C:\whereever\my_REAL_py_work_to_be_done.py"
+                     file_path = "C:\Users\Public\tools\windows\monitor-smart-dashboard\monitor.py"
                      execfile(file_path)             #Execute the script
-
-                     inc_file_path2 = "C:\whereever\MORE_REAL_py_work_to_be_done.py"
-                     execfile(inc_file_path2)        #Execute the script
                  except:
                      pass
                  #[actual service code between rests]
